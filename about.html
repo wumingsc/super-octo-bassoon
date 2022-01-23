@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script id="jquery_183" type="text/javascript" class="library"></script>
+    <!--搜索引擎向上一条-->
+    <link rel="stylesheet" href="./font_1230786_swt4kkie8ym/iconfont.css">
+    <!--sou复制-->
+    <link rel="shortcut icon" href="images/dingbiao.png">
+    <!--图标-->
+    <title>Home</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <!-- //js -->
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Black and White Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //for-mobile-apps -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        input,
+        button,
+        select,
+        textarea {
+            outline: none;
+        }
+        
+        <!--body {
+            --><!-- background: #fff;
+            --><!--
+        }
+        
+        --><!--textarea {
+            --><!-- font-size: 13px;
+            --><!-- resize: none;
+            --><!--
+        }
+        
+        -->#search_main {
+            width: 629px;
+            height: 32px;
+            margin: 20%;
+            background: #fff;
+        }
+        
+        #search {
+            width: 80%;
+            height: 32px;
+            border: #000000 2px solid;
+            float: left;
+        }
+        
+        .jsSelect {
+            width: 62px;
+            height: 170px;
+            float: left;
+            display: inline;
+            margin-left: -2px;
+        }
+        
+        .jsSelect ul {
+            width: 62px;
+            height: 28px;
+            overflow: hidden;
+            <!--background: #FFF;
+            -->float: left;
+            position: absolute;
+        }
+        
+        .jsSelect ul .s {
+            display: block;
+            background: url(images/68_60.PNG) 0px -30px no-repeat;
+            cursor: default;
+            cursor: pointer;
+            color: #000000;
+            border: none;
+            border-left: 2px solid #000000;
+        }
+        
+        .jsSelect ul li {
+            width: 60px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            color: #A8A8A8;
+            border: none;
+            border-left: 2px solid #000000;
+            border-right: 2px solid #000000;
+        }
+        
+        #chabeihu_s {
+            border-bottom: 2px solid #000000;
+        }
+        
+        #inp {
+            width: 80%;
+            height: 28px;
+            background: none;
+            margin-left: 2px;
+            font-size: 16px;
+            border: none;
+            line-height: 28px;
+            color: #d23bff;
+        }
+        
+        #searchimg {
+            float: right;
+            margin-top: -20px;
+            margin-right: 5px;
+        }
+        
+        #sure {
+            width: 75px;
+            height: 32px;
+            background: url(images/75_32.PNG);
+            text-indent: -9999px;
+            border: none;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+    <!--搜索栏向下向上-->
+    <script>
+        $(document).ready(function() {
+            //$("#inp").focus();
+            $("body #Select").each(function(i) {
+                i = i + 1
+                this.id = "Select" + i;
+                var SumimasenSelect = $("#Select" + i)
+                $(SumimasenSelect).find("ul li:first").hover(function() {
+                    $(".s").css("background", "url(images/68_60.PNG) 0px 0px no-repeat");
+                    $(this).parent("ul").css("height", 225)
+                    $(this).siblings("ul li:not(.s)").mouseenter(function() {
+                        $(".s").css("background", "url(images/68_60.PNG) 0px 0px no-repeat");
+                        $(this).css("background", "#39f").css("color", "#FFFFFF")
+                    });
+                    $(this).siblings("ul li:not(.s)").mouseleave(function() {
+                        $(this).css("background", "none").css("color", "#A8A8A8")
+                        $(".s").css("background", "url(images/68_60.PNG) 0px -30px no-repeat");
+                    });
+                    $(this).siblings("ul li:not(.s)").click(function() {
+                        $(this).parent("ul").css("height", 28)
+                        var cdContent = $(this).text()
+                        $(SumimasenSelect).find("ul li:first").text(cdContent)
+                    });
+                    $(this).parent(SumimasenSelect).mouseleave(function() {
+                        $(this).css("height", 28)
+                    });
+                    $("#fsou_s").click(function() {
+                        $("#inp").attr("name", "q");
+                        $("#sform").attr("action", "https://fsou.cc/search");
+                        $("#searchimg").css("background");
+                    });
+                    $("#gaode_s").click(function() {
+                        $("#inp").attr("name", "query");
+                        $("#sform").attr("action", "http://www.amap.com/search");
+                        $("#searchimg").css("background");
+                    });
+                    $("#google_s").click(function() {
+                        $("#inp").attr("name", "q");
+                        $("#sform").attr("action", "http://www.google.com.hk/search");
+                        $("#searchimg").css("background");
+                    });
+                    $("#biying_s").click(function() {
+                        $("#inp").attr("name", "q");
+                        $("#sform").attr("action", "https://cn.bing.com/search");
+                        $("#searchimg").css("background");
+                    });
+                    $("#youdao_s").click(function() {
+                        $("#inp").attr("name", "q");
+                        $("#sform").attr("action", "http://www.youdao.com/search");
+                        $("#searchimg").css("background");
+                    });
+                    $("#zhixuancangshu_s").click(function() {
+                        $("#inp").attr("name", "keyword");
+                        $("#sform").attr("action", "http://www.zxcs.info/index.php");
+                        $("#searchimg").css("background");
+                    });
+                    $("#chabeihu_s").click(function() {
+                        $("#inp").attr("name", "key");
+                        $("#sform").attr("action", "http://www.cupfox.com/search");
+                        $("#searchimg").css("background");
+                    });
+
+                });
+
+            }, function() {
+                $(".s").css("background", "url(images/68_60.PNG) 0px -30px no-repeat");
+
+            });
+        });
+    </script>
+    <!--搜索栏向上-->
+    <!-- start-smoth-scrolling -->
+    <!-- hover-effects -->
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- //hover-effects -->
+
+
+</head>
+<!--<body background="https://www.yuanxiapi.cn/api/img/?type=&format=img" >-->
+
+<body>
+    <!-- header -->
+    <div class="banner1">
+        <div class="header">
+            <div class="container">
+                <div class="banner-nav">
+                    <span class="menu"><img src="images/menu.png" alt=" "/></span>
+                    <ul class="nav1">
+                        <nav class="cl-effect-3">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html" class="act">About Us</a></li>
+                            <li><a href="index.html">Team</a></li>
+                            <li><a href="index.html">Services</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html">Contact Us</a></li>
+                        </nav>
+                    </ul>
+
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt=" " /></a>
+                    </div>
+                </div>
+                <!-- script for menu -->
+                <script>
+                    $("span.menu").click(function() {
+                        $("ul.nav1").slideToggle(300, function() {
+                            // Animation complete.
+                        });
+                    });
+                </script>
+                <!-- //script for menu -->
+            </div>
+        </div>
+    </div>
+    <!-- //header-->
+    <!-- about -->
+
+    <div class="about">
+        <div class="container">
+            <h3>生活总是美好的,无论你的境遇是好是坏,只要你对生活还热爱。</h3>
+            <p class="para1">这也许不是所有的，但是也会提供一些给你.</p>
+            <!--		<div class="about-grids">-->
+            <!--			<div class="about-grid">-->
+            <!--				<div class="grid1">-->
+            <!--					<h4>左侧标题栏</h4>-->
+            <!--					<img src="https://www.yuanxiapi.cn/api/img/?type=fengjing&format=img" alt=" " />-->
+            <!--这是一张图-->
+            <!--				</div>-->
+            <!--				<div class="grid1 gri">-->
+
+            <!--                <p>-->
+            <!--				<form target="_blank" method="get" action="http://www.baidu.com/s">-->
+            <!--				<input type="text" autocomplete="off" class="searchWord" name="wd" baidusug="1" />-->
+            <!--					<span class="box-search-submit cf rep fl"><b class="r fr bg"></b><b class="l fl bg">-->
+            <!--					</b><input type="submit" value="搜索一下" class="searchSubmit fl" hidefocus="true" /></span></form></p>-->
+
+            <!--</br>-->
+
+            <!--简陋的搜索栏-->
+
+            <div class="list">
+
+                <a href="https://kmos.kaikeba.com/" target="_blank">
+                    <img border="0" src="https://img.kaikeba.com/a/01241172501202qays.png" width="100" height="35" /></a>
+                <li class="title"><i class="iconfont icon-youxiang"></i> 邮箱</li>
+                <a rel="nofollow" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i
+                                class="iconfont icon-gmail" style="color: #f03;"></i>Gmail</a>
+                <a href="https://yuanxiapi.cn/" target="_blank">这是</a>
+                <a href="https://api.uomg.com/" target="_blank">API</a>
+                <a href="https://wumingsc.github.io/sun.github.io/" target="_blank">我的笔记</a>
+                <a rel="nofollow" href="https://outlook.live.com/mail/" target="_blank"><i
+                                class="iconfont icon-windows" style="color: #059;"></i>Hotmail</a>
+                </table> <a rel="nofollow" href="https://mail.163.com/" target="_blank"><i
+                                class="iconfont icon-wangyi" style="color: #169;"></i>网易邮箱</a>
+                <a rel="nofollow" href="https://mail.sina.com.cn/" target="_blank"><i
+                                class="iconfont icon-xinlang" style="color: #e6162d;"></i>新浪邮箱</a>
+                <a rel="nofollow" href="https://mail.qq.com/" target="_blank"><i
+                                class="iconfont icon-QQ" style="color: #f05;"></i>QQ邮箱</a>
+                <a rel="nofollow" href="https://qiye.aliyun.com/" target="_blank"><i
+                                class="iconfont icon-yunyouxiang" style="color: #f15534;"></i>阿里邮箱</a>
+                <li class="title"><i class="iconfont icon-msg"></i> 社交</li>
+                <a rel="nofollow" href="https://www.weibo.com" target="_blank"><i
+                                class="iconfont icon-weibo" style="color: #e6162d;"></i>微博</a>
+                <a rel="nofollow" href="https://www.zhihu.com/" target="_blank"><i
+                                class="iconfont icon-zhihu" style="color: #0084ff;"></i>知乎</a>
+                <a rel="nofollow" href="https://www.douban.com/" target="_blank"><i
+                                class="iconfont icon-douban" style="color: #072;"></i>豆瓣</a>
+                <a rel="nofollow" href="https://www.instagram.com" target="_blank"><i
+                                class="iconfont icon-instagram" style="color: #93009f;"></i>Instagram</a>
+                <a rel="nofollow" href="https://www.twitter.com" target="_blank"><i
+                                class="iconfont icon-twitter" style="color: #00bcff;"></i>Twitter</a>
+                <a rel="nofollow" href="https://www.facebook.com" target="_blank"><i
+                                class="iconfont icon-facebook" style="color: #4267b2;"></i>Facebook</a>
+                <!------>
+                <li class="title"><i class="iconfont icon-shipin"></i> 视频媒体</li>
+                <a rel="nofollow" href="https://www.youtube.com/" target="_blank"><i
+                                class="iconfont icon-youtube" style="color:#f03;"></i>Youtube</a>
+                <a rel="nofollow" href="https://v.qq.com/" target="_blank"><i
+                                class="iconfont icon-tengxunshipin" style="color:#2a0;"></i>腾讯视频</a>
+                <a rel="nofollow" href="https://www.youku.com/" target="_blank"><i
+                                class="iconfont icon-youku" style="color:#09e;"></i>优酷</a>
+                <a rel="nofollow" href="https://www.iqiyi.com/" target="_blank"><i
+                                class="iconfont icon-aiqiyi" style="color:#1d0;"></i>爱奇艺</a>
+                <a rel="nofollow" href="http://www.zmz2019.com/" target="_blank"><i
+                                class="iconfont icon-zimu" style="color: #067;"></i>字幕组</a>
+                <a rel="nofollow" href="http://www.acfun.cn/index.html" target="_blank"><i
+                                class="iconfont icon-acfun" style="color:#f33;"></i>ACFUN</a>
+                <a rel="nofollow" href="https://www.bilibili.com/" target="_blank"><i
+                                class="iconfont icon-bili" style="color:#09e;"></i>哔哩哔哩</a>
+                <a rel="nofollow" href="/movies/" target="_blank"><i class="iconfont icon-yunbo"
+                                                                                 style="color:#0bf;"></i>影视搜索</a>
+
+                <a rel="nofollow" href="/tv/" target="_blank"><i class="iconfont icon-dianshi"
+                                                                             style="color:#9ae;"></i>直播电视</a>
+
+                <a rel="nofollow" href="https://music.yyv.me/" target="_blank"><i
+                                class="iconfont icon-yinle" style="color:#f4a;"></i>音乐解析</a>
+                <!------>
+                <li class="title"><i class="iconfont icon-gouwuche"></i> 购物</li>
+                <a rel="nofollow" href="https://www.taobao.com" target="_blank"><i
+                                class="iconfont icon-taobao" style="color: #ff6019;"></i>淘宝网</a>
+                <a rel="nofollow" href="https://dyartstyle.com/juhuasuan/" target="_blank"><i
+                                class="iconfont icon-juhuasuan" style="color: #E61414;"></i>聚划算</a>
+                <a rel="nofollow" href="https://dyartstyle.com/temai/" target="_blank"><i
+                                class="iconfont icon-temai" style="color: #ff6019;"></i>淘宝特卖</a>
+                <a rel="nofollow" href="https://mobile.yangkeduo.com/duo_cms_mall.html?pid=8742514_71211367&cpsSign=CM_190605_8742514_71211367_92fdd9f7fb637fec599bf556f263ed1f&duoduo_type=2&launch_wx=1" title="拼多多手机端专属商城，超低价商品火热抢购中，更有超多大额优惠券持续发放，一键立抢>>" target="_blank"><i class="iconfont icon-99" style="color: #f83e3e;"></i>拼多多</a>
+                <a rel="nofollow" href="https://www.jd.com" target="_blank"><i
+                                class="iconfont icon-jingdong" style="color: #e33333;"></i>京东</a>
+                <a rel="nofollow" href="https://www.suning.com/" target="_blank"><i
+                                class="iconfont icon-suning" style="color: #f90;"></i>苏宁易购</a>
+                <a rel="nofollow" href="http://you.163.com/" target="_blank"><i
+                                class="iconfont icon-yanxuan" style="color: #B4A078;"></i>网易严选</a>
+                <a rel="nofollow" href="https://www.amazon.cn/" target="_blank"><i
+                                class="iconfont icon-amazon" style="color: #fc9b18;"></i>亚马逊</a>
+                <a rel="nofollow" href="http://www.dangdang.com/" target="_blank"><i
+                                class="iconfont icon-dangdang" style="color: #ff2832;"></i>当当</a>
+                <a rel="nofollow" href="https://wat.dyartstyle.com/" target="_blank"><i
+                                class="iconfont icon-wat" style="color: #fe2e52;"></i>吾爱淘</a>
+                <li class="title"><i class="iconfont icon-sheji"></i> 设计视觉</li>
+                <a rel="nofollow" href="https://web.yyv.me/" target="_blank"><i
+                                class="iconfont icon-daohang1"></i>设计导航</a>
+                <a rel="nofollow" href="https://www.pinterest.com/" target="_blank"><i
+                                class="iconfont icon-pinterest" style="color:#e02;"></i>Pinterest</a>
+                <a rel="nofollow" href="https://www.behance.net/" target="_blank"><i
+                                class="iconfont icon-behance" style="color:#56f;"></i>Behance</a>
+                <a rel="nofollow" href="https://www.dribbble.com/" target="_blank"><i
+                                class="iconfont icon-dribbble" style="color:#e48;"></i>Dribbble</a>
+                <a rel="nofollow" href="https://huaban.com/" target="_blank"><i
+                                class="iconfont icon-huaban" style="color:#f06;"></i>花瓣</a>
+                <a rel="nofollow" href="https://www.zcool.com.cn/" target="_blank"><i
+                                class="iconfont icon-zhanku" style="color:#f90;"></i>站酷</a>
+                <a rel="nofollow" href="https://www.iconfont.cn/" target="_blank"><i
+                                class="iconfont icon-iconfont" style="color: #ff6019;"></i>阿里图标</a>
+                <a rel="nofollow" href="https://www.iconfinder.com/" target="_blank"><i
+                                class="iconfont icon-eye"></i>IconFinder</a>
+                <a rel="nofollow" href="https://uiiiuiii.com/" target="_blank"><i
+                                class="iconfont icon-jiaocheng" style="color:#0aa;"></i>优设教程</a>
+                <!------>
+                <li class="title"><i class="iconfont icon-ai-tool"></i> 工具</li>
+
+                <a href="https://tool.lu/" target="_blank">在线工具</a>
+                <a rel="nofollow" href="/ip/" target="_blank"><i class="iconfont icon-wangluo"
+                                                                             style="color: #02f;"></i>IP查询</a>
+
+                <a rel="nofollow" href="https://translate.google.cn/?hl=zh-CN" target="_blank"><i
+                                class="iconfont icon-fanyi" style="color: #02f;"></i>谷歌翻译</a>
+                <a rel="nofollow" href="http://www.slimego.cn/" target="_blank"><i
+                                class="iconfont icon-shilaimu" style="color: #0f89c2;"></i>史莱姆</a>
+                <a rel="nofollow" href="https://gugeji.com/" target="_blank"><i
+                                class="iconfont icon-google" style="color:#4285f4"></i>镜像</a>
+                <a rel="nofollow" href="https://feedly.com" target="_blank"><i
+                                class="iconfont icon-feedly" style="color: #11dd00;"></i>Feedly</a>
+                <a rel="nofollow" href="https://pan.baidu.com" target="_blank"><i
+                                class="iconfont icon-baiduyun" style="color: #148bfe;"></i>百度网盘</a>
+                <a rel="nofollow" href="https://www.baiduwp.com" target="_blank"><i
+                                class="iconfont icon-cloud-download" style="color: #148bfe;"></i>网盘解析</a>
+                <a rel="nofollow" href="https://www.mdeditor.com/" target="_blank"><i
+                                class="iconfont icon-md" style="color:#09f;"></i>MD编辑器</a>
+                <a rel="nofollow" href="https://miku.tools/" target="_blank"><i
+                                class="iconfont icon-ai-tool"></i>Miku工具</a>
+                <a rel="nofollow" href="http://cubic-bezier.com" target="_blank"><i
+                                class="iconfont icon-quxian" style="color: #f08;"></i>贝赛尔曲线</a>
+                <a rel="nofollow" href="/base64/" target="_blank"><i class="iconfont icon-base64"
+                                                                                 style="color:#1d0;"></i>Base64</a>
+
+                <a rel="nofollow" href="https://javascriptobfuscator.com/Javascript-Obfuscator.aspx" target="_blank"><i class="iconfont icon-jshunxiao" style="color: #48c;"></i>JS混淆器</a>
+
+                <a rel="nofollow" href="https://ping.pe" target="_blank"><i
+                                class="iconfont icon-wangluo1" style="color:#1d0;"></i>Ping.pe</a>
+                <a rel="nofollow" href="https://ping.chinaz.com/" target="_blank"><i
+                                class="iconfont icon-pingup" style="color:#2361ad;"></i>站长Ping</a>
+                <a rel="nofollow" href="https://apkdl.in/" target="_blank"><i
+                                class="iconfont icon-anzhuo" style="color:#094;"></i>APK下载</a>
+                <a rel="nofollow" href="https://encycolorpedia.cn/" target="_blank"><i
+                                class="iconfont icon-dribbble" style="color:#e48;"></i>调色板</a>
+
+                <!------>
+                <li><a class="title"><i class="iconfont icon-kongzhitai"></i> 开发</a></li>
+                <a rel="nofollow" href="http://www.w3school.com.cn/" target="_blank"><i
+                                class="iconfont icon-h5" style="color:#c03;"></i>W3school</a>
+                <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+                <a rel="nofollow" href="https://github.com/" target="_blank"><i
+                                class="iconfont icon-github"></i>Github</a>
+                <a rel="nofollow" href="https://codepen.io/" target="_blank"><i
+                                class="iconfont icon-codepen"></i>Codepen</a>
+                <a rel="nofollow" href="https://www.52pojie.cn/" target="_blank"><i
+                                class="iconfont icon-theater-masks" style="color:#f03;"></i>吾爱破解</a>
+                <a rel="nofollow" href="https://segmentfault.com/" target="_blank"><i
+                                class="iconfont icon-msg" style="color:#096;"></i>SF思否</a>
+                <a rel="nofollow" href="https://cdnjs.com/" target="_blank"><i
+                                class="iconfont icon-cdnjs" style="color: #e52;"></i>CdnJs</a>
+                <a rel="nofollow" href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank"><i class="iconfont icon-font-awesome" style="color: #4af;"></i>Font
+                            A.</a>
+                <a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><i
+                                class="iconfont icon-windows" style="color: #48c;"></i>MSDN下载</a>
+                <a rel="nofollow" href="https://dash.cloudflare.com/" target="_blank"><i
+                                class="iconfont icon-cloudflare" style="color: #f37f20;"></i>C. flare</a>
+                <a rel="nofollow" href="https://www.swiper.com.cn/" target="_blank"><i
+                                class="iconfont icon-S" style="color:#065fe3;"></i>Swiper</a></p>
+                </ul>
+            </div>
+
+
+            <!--此处向下是搜索-->
+            <!-- <div id="search_main">-->
+            <form target="_blank" action="http://www.baidu.com/s" method="get" id="sform">
+                <div id="search">
+                    <div class="jsSelect" id="Select">
+                        <ul>
+                            <li class="s">百度</li>
+                            <li id="fsou_s">F搜</li>
+                            <li id="gaode_s">高德</li>
+                            <li id="google_s">谷歌</li>
+                            <li id="biying_s">必应</li>
+                            <li id="youdao_s">有道</li>
+                            <li id="zhixuancangshu_s">藏书</li>
+                            <li id="chabeihu_s">茶杯狐</li>
+                        </ul>
+                    </div>
+                    <input name="wd" type="text" value="" autocomplete="off" id="inp">
+                    <div id="searchimg"></div>
+                </div>
+                <input type="submit" value="搜索" id="sure" />
+            </form>
+        </div>
+        <!--搜索引擎-->
+        </br>
+        <div id="datetime" style="color:#cb78ce;font-size:4.0em; text-align: center">
+            <script>
+                setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000)
+            </script>
+        </div>
+        <!--时间-->
+        <!--			<div class="clearfix"> </div>-->
+        <!--			</div>-->
+        <!--			<div class="about-grid1">-->
+        <!--				<h4>Our Missions</h4>-->
+        <!--				<div class="about-mission">-->
+        <!--					<a href="single.html"><img src="images/4.jpg" alt=" " /></a>-->
+        <!--					<h5><a href="single.html">Donec rutrum congue leo convallis</a></h5>-->
+        <!--					<p>Sed porttitor lactus nibh.Proin-->
+        <!--					eget tortor risus.Nulla porttitor accumsan tincidunt.-->
+        <!--					Sed porttitorlactus nibh-->
+        <!--					eget tortor risus.Nulla porttitor accumsan tincidunt.</p>-->
+        <!--				</div>-->
+        <!--				<div class="about-mission">-->
+        <!--					<a href="single.html"><img src="images/6.jpg" alt=" " /></a>-->
+        <!--					<h5><a href="single.html">Donec rutrum congue leo convallis</a></h5>-->
+        <!--					<p>Sed porttitor lactus nibh.Proin-->
+        <!--					eget tortor risus.Nulla porttitor accumsan tincidunt.-->
+        <!--					Sed porttitorlactus nibh-->
+        <!--					eget tortor risus.Nulla porttitor accumsan tincidunt.</p>-->
+        <!--				</div>-->
+        <!--				<div class="about-mission">-->
+        <!--					<a href="single.html"><img src="images/5.jpg" alt=" " /></a>-->
+        <!--					<h5><a href="single.html">Donec rutrum congue leo convallis</a></h5>-->
+        <!--					<p>Sed porttitor lactus nibh.Proin-->
+        <!--					eget tortor risus.Nulla porttitor accumsan tincidunt.-->
+        <!--					Sed porttitorlactus nibh-->
+        <!--					eget tortor risus.Nulla porttitor accumsan tincidunt.</p>-->
+        <!--				</div>-->
+        <!--				<div class="clearfix"> </div>-->
+        <!--			</div>-->
+        <!--		</div>-->
+        <!--	</div>-->
+        <!--	</div>-->
+        <!-- //about -->
+        <!-- footer -->
+
+        <div class="footer">
+            <div class="container">
+                <p>Copyright © 2022 孫•<a target="_blank" href="http://sc.chinaz.com/moban/">十三</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+</body>
+
+</html>
